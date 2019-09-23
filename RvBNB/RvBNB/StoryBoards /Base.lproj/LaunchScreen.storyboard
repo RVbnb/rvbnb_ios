@@ -18,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Launch2" translatesAutoresizingMaskIntoConstraints="NO" id="iCi-2F-AWC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchRV" translatesAutoresizingMaskIntoConstraints="NO" id="iCi-2F-AWC">
                                 <rect key="frame" x="-12" y="0.0" width="438" height="969"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BuildWeekRVLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oMR-vB-Yhw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oMR-vB-Yhw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HnF-tk-5Fc"/>
+                            <constraint firstItem="oMR-vB-Yhw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hwu-Ub-Kut"/>
+                            <constraint firstItem="oMR-vB-Yhw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y2G-do-vXw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch2" width="1080" height="1920"/>
+        <image name="BuildWeekRVLogo" width="200" height="200"/>
+        <image name="LaunchRV" width="1332" height="1999"/>
     </resources>
 </document>
