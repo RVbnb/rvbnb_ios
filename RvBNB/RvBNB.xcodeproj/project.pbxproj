@@ -11,6 +11,14 @@
 		4556A71C23392C1E00FD0CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556A71A23392C1E00FD0CC5 /* Main.storyboard */; };
 		4556A71E23392C1F00FD0CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4556A71D23392C1F00FD0CC5 /* Assets.xcassets */; };
 		4556A72123392C1F00FD0CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556A71F23392C1F00FD0CC5 /* LaunchScreen.storyboard */; };
+		45BB10A7233975E0007538E3 /* LandListingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10A6233975E0007538E3 /* LandListingsCollectionViewController.swift */; };
+		45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10A823397648007538E3 /* LandDetailViewController.swift */; };
+		45BB10AB23397670007538E3 /* LandListedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10AA23397670007538E3 /* LandListedCollectionViewCell.swift */; };
+		45BB10AD233976FE007538E3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10AC233976FE007538E3 /* LogInViewController.swift */; };
+		45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10AE2339778A007538E3 /* CreateProfileViewController.swift */; };
+		45BB10B12339780E007538E3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B02339780E007538E3 /* UserViewController.swift */; };
+		45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B22339782C007538E3 /* ListYourLandViewController.swift */; };
+		45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B42339785B007538E3 /* SettingsViewController.swift */; };
 		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +29,14 @@
 		4556A71D23392C1F00FD0CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4556A72023392C1F00FD0CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4556A72223392C1F00FD0CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45BB10A6233975E0007538E3 /* LandListingsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandListingsCollectionViewController.swift; sourceTree = "<group>"; };
+		45BB10A823397648007538E3 /* LandDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandDetailViewController.swift; sourceTree = "<group>"; };
+		45BB10AA23397670007538E3 /* LandListedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandListedCollectionViewCell.swift; sourceTree = "<group>"; };
+		45BB10AC233976FE007538E3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		45BB10AE2339778A007538E3 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		45BB10B02339780E007538E3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		45BB10B22339782C007538E3 /* ListYourLandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListYourLandViewController.swift; sourceTree = "<group>"; };
+		45BB10B42339785B007538E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +54,7 @@
 		4556A70A23392C1E00FD0CC5 = {
 			isa = PBXGroup;
 			children = (
+				45BB10B6233978EE007538E3 /* View Controllers */,
 				4556A71523392C1E00FD0CC5 /* RvBNB */,
 				4556A71423392C1E00FD0CC5 /* Products */,
 			);
@@ -60,6 +77,21 @@
 				4556A72223392C1F00FD0CC5 /* Info.plist */,
 			);
 			path = RvBNB;
+			sourceTree = "<group>";
+		};
+		45BB10B6233978EE007538E3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45BB10A6233975E0007538E3 /* LandListingsCollectionViewController.swift */,
+				45BB10A823397648007538E3 /* LandDetailViewController.swift */,
+				45BB10AA23397670007538E3 /* LandListedCollectionViewCell.swift */,
+				45BB10AC233976FE007538E3 /* LogInViewController.swift */,
+				45BB10AE2339778A007538E3 /* CreateProfileViewController.swift */,
+				45BB10B02339780E007538E3 /* UserViewController.swift */,
+				45BB10B22339782C007538E3 /* ListYourLandViewController.swift */,
+				45BB10B42339785B007538E3 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		DD142C652339517A004CF624 /* StoryBoards  */ = {
@@ -144,7 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */,
+				45BB10B12339780E007538E3 /* UserViewController.swift in Sources */,
+				45BB10AB23397670007538E3 /* LandListedCollectionViewCell.swift in Sources */,
+				45BB10A7233975E0007538E3 /* LandListingsCollectionViewController.swift in Sources */,
 				4556A71723392C1E00FD0CC5 /* AppDelegate.swift in Sources */,
+				45BB10AD233976FE007538E3 /* LogInViewController.swift in Sources */,
+				45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */,
+				45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */,
+				45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
