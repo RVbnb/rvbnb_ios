@@ -11,6 +11,7 @@
 		4556A71C23392C1E00FD0CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556A71A23392C1E00FD0CC5 /* Main.storyboard */; };
 		4556A71E23392C1F00FD0CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4556A71D23392C1F00FD0CC5 /* Assets.xcassets */; };
 		4556A72123392C1F00FD0CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556A71F23392C1F00FD0CC5 /* LaunchScreen.storyboard */; };
+		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		4556A71D23392C1F00FD0CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4556A72023392C1F00FD0CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4556A72223392C1F00FD0CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +55,21 @@
 			isa = PBXGroup;
 			children = (
 				4556A71623392C1E00FD0CC5 /* AppDelegate.swift */,
-				4556A71A23392C1E00FD0CC5 /* Main.storyboard */,
+				DD142C652339517A004CF624 /* StoryBoards  */,
 				4556A71D23392C1F00FD0CC5 /* Assets.xcassets */,
-				4556A71F23392C1F00FD0CC5 /* LaunchScreen.storyboard */,
 				4556A72223392C1F00FD0CC5 /* Info.plist */,
 			);
 			path = RvBNB;
+			sourceTree = "<group>";
+		};
+		DD142C652339517A004CF624 /* StoryBoards  */ = {
+			isa = PBXGroup;
+			children = (
+				4556A71F23392C1F00FD0CC5 /* LaunchScreen.storyboard */,
+				DD142C66233951B3004CF624 /* UserProfile.storyboard */,
+				4556A71A23392C1E00FD0CC5 /* Main.storyboard */,
+			);
+			path = "StoryBoards ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4556A72123392C1F00FD0CC5 /* LaunchScreen.storyboard in Resources */,
+				DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */,
 				4556A71E23392C1F00FD0CC5 /* Assets.xcassets in Resources */,
 				4556A71C23392C1E00FD0CC5 /* Main.storyboard in Resources */,
 			);
