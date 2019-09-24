@@ -113,7 +113,8 @@ extension CoreDataModelController {
                         let decoder = JSONDecoder()
                         let registerUserReprentations = try decoder.decode([String: RegisterUserRepresentation].self, from: data).map({ $0.value })
                         
-                      //  self.updateTasks(with: taskReprentations)
+                        
+                       self.updateUser(with: registerUserReprentations)
                         
                     } catch {
                         NSLog("Error decoding: \(error)")
@@ -160,6 +161,99 @@ extension CoreDataModelController {
 extension CoreDataModelController {
     
     func getListing(completion: @escaping(Result<[String],NetworkError>) -> Void) {
+        
+        guard let bearer = bearer else {
+            completion(.failure(.noToken))
+            return
+        }
+        
+        
+        let requestURL = baseURL.appendingPathComponent("/api/listings/:id")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        request.setValue("Bearer: \(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request){(data,response,error) in
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.failure(.responseError))
+                return
+            }
+            
+            if let error = error {
+                NSLog("Error getting animal names: \(error)")
+                completion(.failure(.otherError(error)))
+                return
+            }
+            
+            guard let data = data else{
+                completion(.failure(.noData))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do{
+              let listingNames =  try decoder.decode([String].self, from: data)
+                completion(.success(listingNames))
+            } catch {
+                NSLog("Error decoding animals name: \(error)")
+                completion(.failure(.noDecode))
+                return
+            }
+        
+        }.resume()
+        
+    }
+    
+    func postListing(with ownerID: String, completion: @escaping(NetworkError?)-> Void){
+        
+        let postListingURL = baseURL.appendingPathComponent("/api/listings")
+        
+        var request = URLRequest(url: postListingURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let encoder = JSONEncoder()
+        
+        do {
+           let listingData = try encoder.encode(ownerID)
+            request.httpBody = listingData
+        } catch {
+            NSLog("Error encoding user: \(error)")
+            completion(.encodingError)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+           
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 {
+                completion(.responseError)
+                return
+            }
+            
+            if let error = error{
+                NSLog("Error Creating User on Server: \(error)")
+                completion(.otherError(error))
+                return
+            }
+            completion(nil)
+            
+            }.resume() //Resuming the data task
+        
+        
+        
+    }
+    
+    
+    func updateListings(with ownerID: String, completion: @escaping(NetworkError?)-> Void){
+        
+        
         
     }
     

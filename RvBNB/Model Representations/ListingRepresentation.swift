@@ -11,14 +11,14 @@ import Foundation
 
 struct ListingRepresentation: Codable {
     
-    let id: Int
+    let ownerID: Int
     let landDescription: String
     let photo: String
     let pricePerDay: String
     
     enum CodingKeys: String, CodingKey {
-        case pricePerDay = "price_Per_Day"
-        case id
+        case pricePerDay = "price_per_day"
+        case ownerID = "owner_id"
         case landDescription
         case photo
     }
