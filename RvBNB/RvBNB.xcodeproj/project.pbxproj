@@ -20,6 +20,8 @@
 		45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B22339782C007538E3 /* ListYourLandViewController.swift */; };
 		45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B42339785B007538E3 /* SettingsViewController.swift */; };
 		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
+		DDEE8D02233A6D1500F8AB4A /* RvBNB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */; };
+		DDEE8D05233A6E3800F8AB4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		45BB10B22339782C007538E3 /* ListYourLandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListYourLandViewController.swift; sourceTree = "<group>"; };
 		45BB10B42339785B007538E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		DDEE8D01233A6D1500F8AB4A /* RvBNB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RvBNB.xcdatamodel; sourceTree = "<group>"; };
+		DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		4556A70A23392C1E00FD0CC5 = {
 			isa = PBXGroup;
 			children = (
+				DDEE8D03233A6D1C00F8AB4A /* Core data */,
 				45BB10B6233978EE007538E3 /* View Controllers */,
 				4556A71523392C1E00FD0CC5 /* RvBNB */,
 				4556A71423392C1E00FD0CC5 /* Products */,
@@ -102,6 +107,15 @@
 				4556A71A23392C1E00FD0CC5 /* Main.storyboard */,
 			);
 			path = "StoryBoards ";
+			sourceTree = "<group>";
+		};
+		DDEE8D03233A6D1C00F8AB4A /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */,
+				DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */,
+			);
+			path = "Core data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +192,11 @@
 			files = (
 				45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */,
 				45BB10B12339780E007538E3 /* UserViewController.swift in Sources */,
+				DDEE8D02233A6D1500F8AB4A /* RvBNB.xcdatamodeld in Sources */,
 				45BB10AB23397670007538E3 /* LandListedCollectionViewCell.swift in Sources */,
 				45BB10A7233975E0007538E3 /* LandListingsCollectionViewController.swift in Sources */,
 				4556A71723392C1E00FD0CC5 /* AppDelegate.swift in Sources */,
+				DDEE8D05233A6E3800F8AB4A /* CoreDataStack.swift in Sources */,
 				45BB10AD233976FE007538E3 /* LogInViewController.swift in Sources */,
 				45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */,
 				45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */,
@@ -382,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DDEE8D01233A6D1500F8AB4A /* RvBNB.xcdatamodel */,
+			);
+			currentVersion = DDEE8D01233A6D1500F8AB4A /* RvBNB.xcdatamodel */;
+			path = RvBNB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4556A70B23392C1E00FD0CC5 /* Project object */;
 }
