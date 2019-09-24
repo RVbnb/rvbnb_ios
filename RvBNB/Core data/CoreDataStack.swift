@@ -24,6 +24,8 @@ extension NSManagedObjectContext {
 
 class CoreDataStack {
     
+    static let shared = CoreDataStack()
+    
     lazy var persistentContainer:NSPersistentContainer = {
         let container = NSPersistentContainer(name: "RvBNB")
         container.loadPersistentStores { (_, error) in

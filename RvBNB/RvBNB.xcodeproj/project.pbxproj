@@ -24,6 +24,8 @@
 		45BB10BC233A727D007538E3 /* ListingRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10BB233A727D007538E3 /* ListingRepresentation.swift */; };
 		45BB10BF233A73D7007538E3 /* RvBNB+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */; };
 		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
+		DDDE789D233A7BBF007DE334 /* coreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE789C233A7BBF007DE334 /* coreDataController.swift */; };
+		DDDE789F233A8642007DE334 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE789E233A8642007DE334 /* Bearer.swift */; };
 		DDEE8D02233A6D1500F8AB4A /* RvBNB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */; };
 		DDEE8D05233A6E3800F8AB4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		45BB10BB233A727D007538E3 /* ListingRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRepresentation.swift; sourceTree = "<group>"; };
 		45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RvBNB+Convenience.swift"; sourceTree = "<group>"; };
 		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		DDDE789C233A7BBF007DE334 /* coreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataController.swift; sourceTree = "<group>"; };
+		DDDE789E233A8642007DE334 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		DDEE8D01233A6D1500F8AB4A /* RvBNB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RvBNB.xcdatamodel; sourceTree = "<group>"; };
 		DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +70,7 @@
 		4556A70A23392C1E00FD0CC5 = {
 			isa = PBXGroup;
 			children = (
-				45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */,
+				DDDE789B233A7BA0007DE334 /* model Controller */,
 				45BB10BD233A738F007538E3 /* Model Representations */,
 				DDEE8D03233A6D1C00F8AB4A /* Core data */,
 				45BB10B6233978EE007538E3 /* View Controllers */,
@@ -129,9 +133,19 @@
 			path = "StoryBoards ";
 			sourceTree = "<group>";
 		};
+		DDDE789B233A7BA0007DE334 /* model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDDE789C233A7BBF007DE334 /* coreDataController.swift */,
+				DDDE789E233A8642007DE334 /* Bearer.swift */,
+			);
+			path = "model Controller";
+			sourceTree = "<group>";
+		};
 		DDEE8D03233A6D1C00F8AB4A /* Core data */ = {
 			isa = PBXGroup;
 			children = (
+				45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */,
 				DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */,
 				DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */,
 			);
@@ -220,6 +234,8 @@
 				45BB10AD233976FE007538E3 /* LogInViewController.swift in Sources */,
 				45BB10B8233A7136007538E3 /* RegisterUserRepresentation.swift in Sources */,
 				45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */,
+				DDDE789F233A8642007DE334 /* Bearer.swift in Sources */,
+				DDDE789D233A7BBF007DE334 /* coreDataController.swift in Sources */,
 				45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */,
 				45BB10BF233A73D7007538E3 /* RvBNB+Convenience.swift in Sources */,
 				45BB10BA233A7231007538E3 /* LogInUserRepresentation.swift in Sources */,
