@@ -14,9 +14,29 @@ extension Register {
     
     var registerUserRepresentation: RegisterUserRepresentation?{
         guard let username = userName,
+        let password = password
+            else{return nil}
         
+        return RegisterUserRepresentation(userName: username, password: password, isLandOwner: isLandOwner)
         
+    }
+    
+    
+    convenience init(userName: String, password: String, isLandOwner: Bool, context: NSManagedObjectContext) {
         
+        self.init(context: context)
+        
+        self.userName = userName
+        self.password = password
+        self.isLandOwner = isLandOwner
+        
+    }
+    
+    
+    
+    @discardableResult convenience init?(registerUserRepresentation: RegisterUserRepresentation, context: NSManagedObjectContext) {
+        
+        self.init(userName: registerUserRepresentation.userName, password: registerUserRepresentation.password, isLandOwner: registerUserRepresentation.isLandOwner, context: context)
         
         
     }
