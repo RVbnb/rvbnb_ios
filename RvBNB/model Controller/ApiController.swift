@@ -30,7 +30,7 @@ enum NetworkError: Error {
 class ApiController {
     
     //MARK: - properties
-    let baseURL = URL(string: "https://rvbnb.herokuapp.com/")!
+    let baseURL = URL(string: "https://rvbnb.herokuapp.com")!
     var bearer: Bearer?
     
     //MARK: - CRUD Methods
@@ -64,9 +64,10 @@ class ApiController {
 extension ApiController {
     
      func registerUser(with user: User, completion: @escaping () -> Void = {} )  {
-        let registerURL = baseURL.appendingPathComponent("/api/auth/register")
+        let registerURL = baseURL.appendingPathComponent("api/auth/register")
         var request = URLRequest(url: registerURL)
         request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let encoder = JSONEncoder()
         
         do {
@@ -79,7 +80,8 @@ extension ApiController {
             if let error = error as NSError? {
                 fatalError("failed to post user: \(error)")
             }
-            if let response = response as? HTTPURLResponse, response.statusCode != 201 {
+            if let response = response as? HTTPURLResponse, response.statusCode == 201 {
+                print(response.statusCode)
                 NSLog("failed to create user")
                 return
             }
@@ -107,7 +109,8 @@ extension ApiController {
                 NSLog("error logging in user: \(error)")
                 return
             }
-            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                print(response.statusCode)
                 return
             }
         
@@ -164,9 +167,6 @@ extension ApiController {
         
     }
     func postListing() {}
-    
-    
-    
     
     
     func getListings(completion: @escaping(Result<[String],NetworkError>) -> Void ) {

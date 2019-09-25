@@ -27,10 +27,16 @@ class CreateProfileViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        guard let apiController = apiController else {return}
         guard let username = firstNameTextField.text, !username.isEmpty,
             let password = passwordTextField.text,!password.isEmpty else {return}
         let user = User(username: username, password: password, isLandOwner: false, context: CoreDataStack.shared.mainContext)
-        apiController?.registerUser(with: user)
+        DispatchQueue.main.async {
+            apiController.registerUser(with: user)
+            }
+        
+        
+        
         dismiss(animated: true, completion: nil)
     }
     

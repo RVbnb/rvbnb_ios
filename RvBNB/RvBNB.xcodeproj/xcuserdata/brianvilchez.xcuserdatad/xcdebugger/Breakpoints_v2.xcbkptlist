@@ -7,7 +7,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630"
+            uuid = "7ED9BF7F-E2CC-436E-9143-11B1C7504143"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Model Representations/UserRegisterRepresentation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7E85B49-CE56-46FA-8944-935EED0757E3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -16,11 +32,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "registerUser(with:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
-                  uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630 - febd48ba0506e20b"
+                  uuid = "A7E85B49-CE56-46FA-8944-935EED0757E3 - febd48ba0506e20b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -35,7 +51,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630 - b2b986214e132a67"
+                  uuid = "A7E85B49-CE56-46FA-8944-935EED0757E3 - b2b986214e132a67"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -50,7 +66,7 @@
                   offsetFromSymbolStart = "311">
                </Location>
                <Location
-                  uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630 - 385aa247c861d1b0"
+                  uuid = "A7E85B49-CE56-46FA-8944-935EED0757E3 - 385aa247c861d1b0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
