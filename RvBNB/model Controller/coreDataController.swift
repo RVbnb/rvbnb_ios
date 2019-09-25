@@ -114,7 +114,7 @@ extension CoreDataModelController {
                         let registerUserReprentations = try decoder.decode([String: RegisterUserRepresentation].self, from: data).map({ $0.value })
                         
                         
-                       self.updateUser(with: registerUserReprentations)
+                     //  self.updateListings(with: registerUserReprentations)
                         
                     } catch {
                         NSLog("Error decoding: \(error)")
