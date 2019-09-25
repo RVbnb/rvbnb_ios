@@ -1,17 +1,16 @@
 //
-//  LogInUserRepresentation.swift
+//  LoginRepresentation.swift
 //  RvBNB
 //
-//  Created by Austin Potts on 9/24/19.
+//  Created by brian vilchez on 9/25/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
 import Foundation
 
 
-struct LogInUserRepresentation: Codable {
-    
+struct LoginRepresentation: Codable {
     let username: String
     let password: String
-    
 }
+

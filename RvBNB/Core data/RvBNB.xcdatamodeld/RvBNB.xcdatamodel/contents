@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Listings" representedClassName="Listings" syncable="YES" codeGenerationType="class">
-        <attribute name="landDescription" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="location" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="ownerID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES">
-            <userInfo/>
-        </attribute>
-        <attribute name="photo" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="pricePerDay" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Listing" representedClassName="Listing" syncable="YES" codeGenerationType="class">
+        <attribute name="landDescription" optional="YES" attributeType="String"/>
+        <attribute name="landPhoto" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="ownerID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pricePerDay" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Login" representedClassName="Login" syncable="YES" codeGenerationType="class">
-        <attribute name="paswword" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="username" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Register" representedClassName="Register" syncable="YES" codeGenerationType="class">
-        <attribute name="isLandOwner" optional="YES" attributeType="Boolean" usesScalarValueType="YES">
-            <userInfo/>
-        </attribute>
-        <attribute name="password" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="userName" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
+        <attribute name="isLandOwner" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="isLandOwner" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Listings" positionX="-36" positionY="36" width="128" height="120"/>
+        <element name="Listing" positionX="-36" positionY="36" width="128" height="118"/>
         <element name="Login" positionX="-54" positionY="18" width="128" height="73"/>
-        <element name="Register" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Register" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="User" positionX="-9" positionY="81" width="128" height="88"/>
     </elements>
 </model>
