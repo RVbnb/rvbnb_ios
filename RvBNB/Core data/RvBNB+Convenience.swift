@@ -64,7 +64,7 @@ extension Listing {
           let landDescription = landDescription else {return nil}
         
         
-    return ListingRepresentation(landPhoto: landPhoto, location: location, ownerID: Int(ownerID), pricePerDay: pricePerDay, landDescription: landDescription)
+    return ListingRepresentation(landPhoto: landPhoto, location: location, ownerID: Int64(ownerID), pricePerDay: pricePerDay, landDescription: landDescription)
     }
     
     

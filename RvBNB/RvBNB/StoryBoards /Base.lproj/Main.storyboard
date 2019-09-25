@@ -207,7 +207,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="14W-4U-rxZ" customClass="LandListedCollectionViewCell" customModule="RvBNB" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LandListedCell" id="14W-4U-rxZ" customClass="LandListedCollectionViewCell" customModule="RvBNB" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="120" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -249,6 +249,8 @@
                                     <constraint firstAttribute="bottom" secondItem="oBK-fz-uUJ" secondAttribute="bottom" id="nTB-Hk-Cfd"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="landListedImage" destination="Tvh-mq-fOJ" id="C5y-wX-Nuy"/>
+                                    <outlet property="landListedLabel" destination="Xgd-wz-Xnh" id="Pdh-cg-a4V"/>
                                     <segue destination="wsF-Ma-mLn" kind="show" id="FuI-1U-F2V"/>
                                 </connections>
                             </collectionViewCell>

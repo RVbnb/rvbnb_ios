@@ -9,6 +9,9 @@
 import Foundation
 
 struct ListingRepresentation: Codable {
+    var listing: [ListingRepresentation] = []
+    
+    
     let landPhoto: String
     let location: String
     let ownerID: Int

@@ -12,6 +12,9 @@ private let reuseIdentifier = "Cell"
 
 class LandListingsCollectionViewController: UICollectionViewController {
 
+    var listingRepresentation: ListingRepresentation?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,22 +41,29 @@ class LandListingsCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return listingRepresentation?.listing.count ?? 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+    //UNCOMMENT
     
-        return cell
-    }
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LandListedCell", for: indexPath) as? LandListedCollectionViewCell else{return UICollectionViewCell()}
+//
+//
+//        let listing = listingRepresentation?.listing[indexPath.item]
+//       cell.listing = listing
+//
+//
+//
+//        return cell
+//    }
 
     // MARK: UICollectionViewDelegate
 
