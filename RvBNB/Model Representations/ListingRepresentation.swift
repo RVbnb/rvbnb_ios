@@ -2,25 +2,24 @@
 //  ListingRepresentation.swift
 //  RvBNB
 //
-//  Created by Austin Potts on 9/24/19.
+//  Created by brian vilchez on 9/25/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
 import Foundation
 
-
 struct ListingRepresentation: Codable {
-    
+    let landPhoto: String
+    let location: String
     let ownerID: Int
+    let pricePerDay: Double
     let landDescription: String
-    let photo: String
-    let pricePerDay: String
     
     enum CodingKeys: String, CodingKey {
-        case pricePerDay = "price_per_day"
+        case landPhoto
+        case location
         case ownerID = "owner_id"
-        case landDescription
-        case photo
+        case pricePerDay = "price_per_day"
+        case landDescription = "description"
     }
-    
 }

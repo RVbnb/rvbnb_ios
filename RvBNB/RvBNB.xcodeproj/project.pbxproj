@@ -19,13 +19,14 @@
 		45BB10B12339780E007538E3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B02339780E007538E3 /* UserViewController.swift */; };
 		45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B22339782C007538E3 /* ListYourLandViewController.swift */; };
 		45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B42339785B007538E3 /* SettingsViewController.swift */; };
-		45BB10B8233A7136007538E3 /* RegisterUserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B7233A7136007538E3 /* RegisterUserRepresentation.swift */; };
-		45BB10BA233A7231007538E3 /* LogInUserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B9233A7231007538E3 /* LogInUserRepresentation.swift */; };
-		45BB10BC233A727D007538E3 /* ListingRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10BB233A727D007538E3 /* ListingRepresentation.swift */; };
 		45BB10BF233A73D7007538E3 /* RvBNB+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */; };
 		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
-		DDDE789D233A7BBF007DE334 /* coreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE789C233A7BBF007DE334 /* coreDataController.swift */; };
 		DDDE789F233A8642007DE334 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE789E233A8642007DE334 /* Bearer.swift */; };
+		DDDE78F0233BC559007DE334 /* UserRegisterRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */; };
+		DDDE78F2233BC573007DE334 /* ListingRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78F1233BC573007DE334 /* ListingRepresentation.swift */; };
+		DDDE78F4233BC58A007DE334 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78F3233BC58A007DE334 /* UserRepresentation.swift */; };
+		DDDE78F6233BC5B0007DE334 /* LoginRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78F5233BC5B0007DE334 /* LoginRepresentation.swift */; };
+		DDDE78F8233BC5DA007DE334 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78F7233BC5DA007DE334 /* ApiController.swift */; };
 		DDEE8D02233A6D1500F8AB4A /* RvBNB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */; };
 		DDEE8D05233A6E3800F8AB4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
@@ -45,13 +46,14 @@
 		45BB10B02339780E007538E3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		45BB10B22339782C007538E3 /* ListYourLandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListYourLandViewController.swift; sourceTree = "<group>"; };
 		45BB10B42339785B007538E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		45BB10B7233A7136007538E3 /* RegisterUserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRepresentation.swift; sourceTree = "<group>"; };
-		45BB10B9233A7231007538E3 /* LogInUserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUserRepresentation.swift; sourceTree = "<group>"; };
-		45BB10BB233A727D007538E3 /* ListingRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRepresentation.swift; sourceTree = "<group>"; };
 		45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RvBNB+Convenience.swift"; sourceTree = "<group>"; };
 		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
-		DDDE789C233A7BBF007DE334 /* coreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataController.swift; sourceTree = "<group>"; };
 		DDDE789E233A8642007DE334 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterRepresentation.swift; sourceTree = "<group>"; };
+		DDDE78F1233BC573007DE334 /* ListingRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRepresentation.swift; sourceTree = "<group>"; };
+		DDDE78F3233BC58A007DE334 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
+		DDDE78F5233BC5B0007DE334 /* LoginRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepresentation.swift; sourceTree = "<group>"; };
+		DDDE78F7233BC5DA007DE334 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		DDEE8D01233A6D1500F8AB4A /* RvBNB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RvBNB.xcdatamodel; sourceTree = "<group>"; };
 		DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,9 +118,10 @@
 		45BB10BD233A738F007538E3 /* Model Representations */ = {
 			isa = PBXGroup;
 			children = (
-				45BB10B7233A7136007538E3 /* RegisterUserRepresentation.swift */,
-				45BB10B9233A7231007538E3 /* LogInUserRepresentation.swift */,
-				45BB10BB233A727D007538E3 /* ListingRepresentation.swift */,
+				DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */,
+				DDDE78F3233BC58A007DE334 /* UserRepresentation.swift */,
+				DDDE78F1233BC573007DE334 /* ListingRepresentation.swift */,
+				DDDE78F5233BC5B0007DE334 /* LoginRepresentation.swift */,
 			);
 			path = "Model Representations";
 			sourceTree = "<group>";
@@ -136,8 +139,8 @@
 		DDDE789B233A7BA0007DE334 /* model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DDDE789C233A7BBF007DE334 /* coreDataController.swift */,
 				DDDE789E233A8642007DE334 /* Bearer.swift */,
+				DDDE78F7233BC5DA007DE334 /* ApiController.swift */,
 			);
 			path = "model Controller";
 			sourceTree = "<group>";
@@ -224,23 +227,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDDE78F6233BC5B0007DE334 /* LoginRepresentation.swift in Sources */,
 				45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */,
+				DDDE78F0233BC559007DE334 /* UserRegisterRepresentation.swift in Sources */,
 				45BB10B12339780E007538E3 /* UserViewController.swift in Sources */,
+				DDDE78F2233BC573007DE334 /* ListingRepresentation.swift in Sources */,
 				DDEE8D02233A6D1500F8AB4A /* RvBNB.xcdatamodeld in Sources */,
 				45BB10AB23397670007538E3 /* LandListedCollectionViewCell.swift in Sources */,
 				45BB10A7233975E0007538E3 /* LandListingsCollectionViewController.swift in Sources */,
+				DDDE78F8233BC5DA007DE334 /* ApiController.swift in Sources */,
+				DDDE78F4233BC58A007DE334 /* UserRepresentation.swift in Sources */,
 				4556A71723392C1E00FD0CC5 /* AppDelegate.swift in Sources */,
 				DDEE8D05233A6E3800F8AB4A /* CoreDataStack.swift in Sources */,
 				45BB10AD233976FE007538E3 /* LogInViewController.swift in Sources */,
-				45BB10B8233A7136007538E3 /* RegisterUserRepresentation.swift in Sources */,
 				45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */,
 				DDDE789F233A8642007DE334 /* Bearer.swift in Sources */,
-				DDDE789D233A7BBF007DE334 /* coreDataController.swift in Sources */,
 				45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */,
 				45BB10BF233A73D7007538E3 /* RvBNB+Convenience.swift in Sources */,
-				45BB10BA233A7231007538E3 /* LogInUserRepresentation.swift in Sources */,
 				45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */,
-				45BB10BC233A727D007538E3 /* ListingRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateProfileViewController: UIViewController {
 
     
-    
+    var apiController: ApiController?
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     
@@ -26,6 +27,11 @@ class CreateProfileViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        guard let username = firstNameTextField.text, !username.isEmpty,
+            let password = passwordTextField.text,!password.isEmpty else {return}
+        let user = User(username: username, password: password, isLandOwner: false, context: CoreDataStack.shared.mainContext)
+        apiController?.registerUser(with: user)
+        dismiss(animated: true, completion: nil)
     }
     
     /*

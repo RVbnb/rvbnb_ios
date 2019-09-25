@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EBAAE037-83E1-4892-AF26-23B8B0797B39"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "model Controller/ApiController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "registerUser(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630 - febd48ba0506e20b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of RvBNB.ApiController.registerUser(with: RvBNB.User, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "RvBNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianvilchez/Documents/xcode/rvbnb_ios/RvBNB/model%20Controller/ApiController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630 - b2b986214e132a67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RvBNB.ApiController.registerUser(with: RvBNB.User, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "RvBNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianvilchez/Documents/xcode/rvbnb_ios/RvBNB/model%20Controller/ApiController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "311">
+               </Location>
+               <Location
+                  uuid = "C98395B0-3ABF-49B8-BA2E-58ED430A1630 - 385aa247c861d1b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in default argument 1 of RvBNB.ApiController.registerUser(with: RvBNB.User, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "RvBNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianvilchez/Documents/xcode/rvbnb_ios/RvBNB/model%20Controller/ApiController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
