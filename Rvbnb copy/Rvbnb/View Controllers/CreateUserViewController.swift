@@ -11,6 +11,10 @@ import UIKit
 class CreateUserViewController: UIViewController {
     
     //MARK: - Properties
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -106,6 +110,7 @@ class CreateUserViewController: UIViewController {
                button.translatesAutoresizingMaskIntoConstraints = false
                 button.titleLabel?.textColor = .darkGray
                button.setTitle("done", for: .normal)
+            button.setTitleColor(.darkGray, for: .normal)
                button.addTarget(self, action: #selector(nextButton), for: .touchUpInside)
             return button
        }()
@@ -118,7 +123,11 @@ class CreateUserViewController: UIViewController {
     
 //MARK: - methods
     @objc func nextButton(){
-        
+        guard let name = nameTextField.text,!name.isEmpty,
+            let email = emailTextField.text,!email.isEmpty,
+            let username = usernameTextField.text,!username.isEmpty,
+            let password = passwordTextField.text,!password.isEmpty else {return}
+        navigationController?.pushViewController(UserProfileViewController(), animated: true)
         
     }
     

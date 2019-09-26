@@ -52,6 +52,11 @@
                     <navigationItem key="navigationItem" id="trL-YH-Dqx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGU-yy-hsn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="7rX-wS-2Mb">
+                    <connections>
+                        <action selector="swipeRight:" destination="Lad-J3-jmg" id="y6f-f5-F4h"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="525" y="-491"/>
         </scene>

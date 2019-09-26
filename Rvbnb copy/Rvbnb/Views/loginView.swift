@@ -19,12 +19,14 @@ class loginView: UIView {
     
     
 //MARK: - properties
- var segueDelegate: loginButtonSegueDelegate?
+ var loginSegueDelegate: loginButtonSegueDelegate?
+ var signupSegueDelegate: SignUpbuttonSegueDelegate?
     
 private var loginButton: UIButton = {
           let button = UIButton()
           button.translatesAutoresizingMaskIntoConstraints = false
           button.setTitle("Login", for: .normal)
+        button.setTitleColor(.white, for: .normal)
              button.titleLabel?.textColor = .white
           button.addTarget(self, action: #selector(LoginButton), for: .touchUpInside)
           return button
@@ -33,8 +35,14 @@ private var loginButton: UIButton = {
     private var signUpButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.setTitle("Sign Up", for: .normal)
-        button.titleLabel?.textColor = .white
+        button.tintColor = .blue
+        button.setTitleColor(.blue, for: .normal)
+        //button.titleLabel?.textColor = .blue
+       // button.backgroundColor = .blue
+        button.titleLabel?.textAlignment = .left
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.addTarget(self, action: #selector(SignUpButton), for: .touchUpInside)
         return button
     }()
@@ -102,6 +110,16 @@ private var loginView: UIView = {
         return view
     }()
     
+    private var createAccountLabel: UILabel = {
+           let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.font = UIFont.systemFont(ofSize: 15)
+            label.text = "Create your account 👉🏻"
+      //  label.backgroundColor = .blue
+            label.textColor = .darkGray
+        label.textAlignment = .right
+        return label
+    }()
     
     
     
@@ -110,12 +128,13 @@ private var loginView: UIView = {
         guard let username = usernameTextfield.text,!username.isEmpty,
             let password = passwordTextfield.text, !password.isEmpty else {return}
             print("\(username), \(password)")
-            segueDelegate?.intiateSegue()
+            loginSegueDelegate?.intiateLoginSegue()
       
         }
     
     @objc func SignUpButton() {
-        segueDelegate?.intiateSegue()
+       
+        signupSegueDelegate?.intiateSignupSegue()
     }
     
    private func setupConstraints() {
@@ -170,10 +189,16 @@ private var loginView: UIView = {
     loginButton.bottomAnchor.constraint(equalTo: loginButtonView.bottomAnchor).isActive = true
     
     
-    loginView.addSubview(signUpButton)
-    signUpButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor, constant: 100 ).isActive = true
-    signUpButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor, constant: -100 ).isActive = true
-    signUpButton.topAnchor.constraint(equalTo: loginView.bottomAnchor).isActive = true
+    loginView.addSubview(createAccountLabel)
+    createAccountLabel.topAnchor.constraint(equalToSystemSpacingBelow: loginButtonView.bottomAnchor, multiplier: 5).isActive = true
+    createAccountLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor, constant: 10).isActive = true
+    createAccountLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor, constant: -170).isActive = true
+   loginView.addSubview(signUpButton)
+    signUpButton.topAnchor.constraint(equalToSystemSpacingBelow: loginButtonView.bottomAnchor, multiplier: 4.5).isActive = true
+    signUpButton.leadingAnchor.constraint(equalTo: createAccountLabel.trailingAnchor, constant: 5).isActive = true
+    signUpButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor, constant: -70 ).isActive = true
+
+    
     
     
     }
