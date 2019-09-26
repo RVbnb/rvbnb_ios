@@ -10,7 +10,7 @@ import Foundation
 import  CoreData
 
 extension NSManagedObjectContext {
-    func save(context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    func saveChanges(context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         context.performAndWait {
             
             do{

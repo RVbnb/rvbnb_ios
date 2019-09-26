@@ -168,7 +168,7 @@ extension ApiController {
                     User(userRepresentation: representation, context: context)
                 }
                 
-                CoreDataStack.shared.mainContext.save(context: context)
+                CoreDataStack.shared.mainContext.saveChanges(context: context)
                 
             } catch {
                 NSLog("Error fetching tasks from persistent store: \(error)")
