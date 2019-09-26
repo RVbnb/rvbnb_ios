@@ -30,7 +30,7 @@ enum NetworkError: Error {
 class ApiController {
     
     //MARK: - properties
-    let baseURL = URL(string: "https://rvbnb.herokuapp.com")!
+    let baseURL = URL(string: "https://rvbnb.herokuapp.com/")!
     var bearer: Bearer?
     
     //MARK: - CRUD Methods
@@ -51,6 +51,7 @@ class ApiController {
     func updateUser(_ user: User, username: String, password:String) {
         user.username = username
         user.password = password
+        //This should be the update user method " updateUserOnServer(user: user) "
         CoreDataStack.shared.mainContext.saveChanges()
     }
     
@@ -80,7 +81,7 @@ extension ApiController {
             if let error = error as NSError? {
                 fatalError("failed to post user: \(error)")
             }
-            if let response = response as? HTTPURLResponse, response.statusCode == 201 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 201 {
                 print(response.statusCode)
                 NSLog("failed to create user")
                 return
@@ -91,11 +92,11 @@ extension ApiController {
   
     func Login(with user: User, completion: @escaping() -> Void) {
         guard let bearer = bearer else {return}
-        let loginURL = baseURL.appendingPathComponent("/api/auth/login")
+        let loginURL = baseURL.appendingPathComponent("api/auth/login")
         
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("bearer: \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
         
         let encoder = JSONEncoder()
         
@@ -109,7 +110,7 @@ extension ApiController {
                 NSLog("error logging in user: \(error)")
                 return
             }
-            if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 print(response.statusCode)
                 return
             }
@@ -128,7 +129,7 @@ extension ApiController {
     }
     
     func updateUserOnServer(with user: User, completion: @escaping() -> Void = {}) {
-        
+        //We need this completed 
     }
     
 }

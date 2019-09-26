@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BuildWeekRVLogo" translatesAutoresizingMaskIntoConstraints="NO" id="w9K-Vx-A9u">
-                                <rect key="frame" x="0.0" y="34" width="414" height="16"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="200"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="TnH-GR-zYc">
-                                <rect key="frame" x="20" y="97" width="374" height="334.5"/>
+                                <rect key="frame" x="20" y="281" width="374" height="334.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRQ-ob-u6k">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
@@ -77,6 +77,9 @@
                                 <rect key="frame" x="187" y="743" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="QIh-U5-y5S" eventType="touchUpInside" id="rzw-3S-ucu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9583815859" green="1" blue="0.95077990970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,7 +175,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wFU-Fg-7Dc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LogIn" id="4fb-jf-kUt"/>
+                    <navigationItem key="navigationItem" title="LogIn" id="4fb-jf-kUt">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="f6M-Gv-SPJ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="passwordTextField" destination="kYm-Pv-fbn" id="M4M-l7-4vJ"/>
                         <outlet property="usernameTextField" destination="EZS-DN-xve" id="FOg-NU-OGZ"/>
