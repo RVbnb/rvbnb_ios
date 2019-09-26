@@ -29,12 +29,16 @@ enum NetworkError: Error {
 
 class ApiController {
     
+    init(){
+        fetchUserFromServer()
+    }
+    
     //MARK: - properties
     let baseURL = URL(string: "https://rvbnb.herokuapp.com/")!
     var bearer: Bearer?
     
     //MARK: - CRUD Methods
-    func CreateUser(withUserName username: String, passwword: String, isLandOwner: Bool)-> User {
+    func createUser(with username: String, passwword: String, isLandOwner: Bool)-> User {
         let user = User(username: username, password: passwword, isLandOwner: isLandOwner, context: CoreDataStack.shared.mainContext)
         registerUser(with: user)
         CoreDataStack.shared.mainContext.saveChanges()
@@ -43,15 +47,14 @@ class ApiController {
     
     func updateIsLandOwner(for user: User) {
         user.isLandOwner = !user.isLandOwner
-        updateUserOnServer(with: user)
         CoreDataStack.shared.mainContext.saveChanges()
         
     }
     
-    func updateUser(_ user: User, username: String, password:String) {
+    func updateUser(user: User, with username: String, password:String) {
         user.username = username
         user.password = password
-        //This should be the update user method " updateUserOnServer(user: user) "
+        updateUserOnServer(with: <#T##[UserRepresentation]#>)
         CoreDataStack.shared.mainContext.saveChanges()
     }
     
@@ -86,7 +89,7 @@ extension ApiController {
                 NSLog("failed to create user")
                 return
             }
-        
+          completion()
         }.resume()
     }
   
@@ -127,6 +130,55 @@ extension ApiController {
         }.resume()
     
     }
+    
+    
+    
+    
+    func fetchUserFromServer(completion: @escaping()-> Void = {}) {
+        
+        
+        //Apending path component adds a forward slash where as appending path extension adds period
+        let requestURL = baseURL.appendingPathExtension("json")
+        
+        URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
+            
+            if let error = error{
+                NSLog("error fetching tasks: \(error)")
+                completion()
+            }
+            
+            guard let data = data else{
+                NSLog("Error getting data task:")
+                completion()
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                
+                //Gives us full array of task representation
+                let taskRepresentations = Array(try decoder.decode([String: UserRepresentation].self, from: data).values)
+                
+                self.updateUserOnServer(with: taskRepresentations)
+                
+                
+                
+            } catch {
+                NSLog("Error decoding: \(error)")
+                
+            }
+            
+            }.resume()
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
     func updateUserOnServer(with representation: [UserRepresentation]){
         

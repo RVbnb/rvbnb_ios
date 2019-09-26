@@ -30,6 +30,16 @@ private var loginButton: UIButton = {
           return button
       }()
     
+    private var signUpButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Sign Up", for: .normal)
+        button.titleLabel?.textColor = .white
+        button.addTarget(self, action: #selector(SignUpButton), for: .touchUpInside)
+        return button
+    }()
+    
+    
 private var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -93,6 +103,8 @@ private var loginView: UIView = {
     }()
     
     
+    
+    
     //MARK: - Methods
 @objc func LoginButton() {
         guard let username = usernameTextfield.text,!username.isEmpty,
@@ -101,6 +113,10 @@ private var loginView: UIView = {
             segueDelegate?.intiateSegue()
       
         }
+    
+    @objc func SignUpButton() {
+        segueDelegate?.intiateSegue()
+    }
     
    private func setupConstraints() {
         
@@ -152,6 +168,13 @@ private var loginView: UIView = {
     loginButton.trailingAnchor.constraint(equalTo: loginButtonView.trailingAnchor).isActive = true
     loginButton.topAnchor.constraint(equalTo: loginButtonView.topAnchor).isActive = true
     loginButton.bottomAnchor.constraint(equalTo: loginButtonView.bottomAnchor).isActive = true
+    
+    
+    loginView.addSubview(signUpButton)
+    signUpButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor, constant: 100 ).isActive = true
+    signUpButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor, constant: -100 ).isActive = true
+    signUpButton.topAnchor.constraint(equalTo: loginView.bottomAnchor).isActive = true
+    
     
     }
 }
