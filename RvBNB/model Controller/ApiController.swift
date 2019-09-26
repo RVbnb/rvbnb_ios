@@ -128,9 +128,55 @@ extension ApiController {
     
     }
     
-    func updateUserOnServer(with user: User, completion: @escaping() -> Void = {}) {
-        //We need this completed 
+    func updateUserOnServer(with representation: [UserRepresentation]){
+        
+        
+        let identifiersToFetch = representation.compactMap({$0.username})
+        
+        let representationByID = Dictionary(uniqueKeysWithValues: zip(identifiersToFetch, representation))
+        
+        //Make a mutable copy of Dictionary above
+        var tasksToCreate = representationByID
+        
+        
+        let context = CoreDataStack.shared.persistentContainer.newBackgroundContext()
+        context.performAndWait {
+            
+            
+            do {
+                let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+                 fetchRequest.predicate = NSPredicate(format: "identifier IN %@", identifiersToFetch)
+                
+                
+                let exisitingUser = try context.fetch(fetchRequest)
+                
+                
+                for user in exisitingUser {
+                  guard let username = user.username,
+                    let representation = representationByID[username] else{return}
+                    
+                    user.username = representation.username
+                    user.password = representation.password
+                    user.isLandOwner = representation.isLandOwner
+                    
+                    tasksToCreate.removeValue(forKey: username)
+                    
+                    
+                }
+                
+                for representation in tasksToCreate.values{
+                    User(userRepresentation: representation, context: context)
+                }
+                
+                CoreDataStack.shared.mainContext.save(context: context)
+                
+            } catch {
+                NSLog("Error fetching tasks from persistent store: \(error)")
+            }
+        }
     }
+        
+        
     
 }
 

@@ -10,12 +10,14 @@ import Foundation
 import  CoreData
 
 extension NSManagedObjectContext {
-    func saveChanges() {
-        if hasChanges {
-            do {
-                try save()
+    func save(context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+        context.performAndWait {
+            
+            do{
+                try context.save()
             } catch {
-                fatalError("error saving to persistent store: \(error)")
+                NSLog("Error saving context \(error)")
+                context.reset()
             }
         }
     }
