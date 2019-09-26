@@ -30,15 +30,25 @@ class CreateProfileViewController: UIViewController {
         guard let apiController = apiController else {return}
         guard let username = firstNameTextField.text, !username.isEmpty,
             let password = passwordTextField.text,!password.isEmpty else {return}
+        
+        
+        //Should 'User' be 'UserRepresentation'?
         let user = User(username: username, password: password, isLandOwner: false, context: CoreDataStack.shared.mainContext)
         DispatchQueue.main.async {
             apiController.registerUser(with: user)
+            self.dismiss(animated: true, completion: nil)
+
             }
         
         
         
+            }
+    
+    
+    @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     
     /*
     // MARK: - Navigation

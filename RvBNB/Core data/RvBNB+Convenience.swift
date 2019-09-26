@@ -61,6 +61,7 @@ extension Listing {
     var listingRepresentation: ListingRepresentation?{
     guard let landPhoto = landPhoto,
           let location = location,
+        
           let landDescription = landDescription else {return nil}
         
         

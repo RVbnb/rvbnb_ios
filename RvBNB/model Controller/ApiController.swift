@@ -30,7 +30,7 @@ enum NetworkError: Error {
 class ApiController {
     
     //MARK: - properties
-    let baseURL = URL(string: "https://rvbnb.herokuapp.com")!
+    let baseURL = URL(string: "https://rvbnb.herokuapp.com/")!
     var bearer: Bearer?
     
     //MARK: - CRUD Methods
@@ -51,6 +51,7 @@ class ApiController {
     func updateUser(_ user: User, username: String, password:String) {
         user.username = username
         user.password = password
+        //This should be the update user method " updateUserOnServer(user: user) "
         CoreDataStack.shared.mainContext.saveChanges()
     }
     
@@ -80,7 +81,7 @@ extension ApiController {
             if let error = error as NSError? {
                 fatalError("failed to post user: \(error)")
             }
-            if let response = response as? HTTPURLResponse, response.statusCode == 201 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 201 {
                 print(response.statusCode)
                 NSLog("failed to create user")
                 return
@@ -91,11 +92,11 @@ extension ApiController {
   
     func Login(with user: User, completion: @escaping() -> Void) {
         guard let bearer = bearer else {return}
-        let loginURL = baseURL.appendingPathComponent("/api/auth/login")
+        let loginURL = baseURL.appendingPathComponent("api/auth/login")
         
         var request = URLRequest(url: loginURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("bearer: \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
         
         let encoder = JSONEncoder()
         
@@ -109,7 +110,7 @@ extension ApiController {
                 NSLog("error logging in user: \(error)")
                 return
             }
-            if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 print(response.statusCode)
                 return
             }
@@ -127,9 +128,55 @@ extension ApiController {
     
     }
     
-    func updateUserOnServer(with user: User, completion: @escaping() -> Void = {}) {
+    func updateUserOnServer(with representation: [UserRepresentation]){
         
+        
+        let identifiersToFetch = representation.compactMap({$0.username})
+        
+        let representationByID = Dictionary(uniqueKeysWithValues: zip(identifiersToFetch, representation))
+        
+        //Make a mutable copy of Dictionary above
+        var tasksToCreate = representationByID
+        
+        
+        let context = CoreDataStack.shared.persistentContainer.newBackgroundContext()
+        context.performAndWait {
+            
+            
+            do {
+                let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+                 fetchRequest.predicate = NSPredicate(format: "identifier IN %@", identifiersToFetch)
+                
+                
+                let exisitingUser = try context.fetch(fetchRequest)
+                
+                
+                for user in exisitingUser {
+                  guard let username = user.username,
+                    let representation = representationByID[username] else{return}
+                    
+                    user.username = representation.username
+                    user.password = representation.password
+                    user.isLandOwner = representation.isLandOwner
+                    
+                    tasksToCreate.removeValue(forKey: username)
+                    
+                    
+                }
+                
+                for representation in tasksToCreate.values{
+                    User(userRepresentation: representation, context: context)
+                }
+                
+                CoreDataStack.shared.mainContext.saveChanges(context: context)
+                
+            } catch {
+                NSLog("Error fetching tasks from persistent store: \(error)")
+            }
+        }
     }
+        
+        
     
 }
 
