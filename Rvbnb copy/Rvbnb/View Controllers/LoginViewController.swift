@@ -14,11 +14,14 @@ protocol loginButtonSegueDelegate {
 class LoginViewController: UIViewController, loginButtonSegueDelegate {
     
     //MARK: - Properties
-    private var loginView: loginView!
+    private var LoginView: loginView! {
+        return view as? loginView
+    }
    
     //MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoginView.segueDelegate = self
         navigationController?.isNavigationBarHidden = true
         view.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
         
@@ -26,11 +29,8 @@ class LoginViewController: UIViewController, loginButtonSegueDelegate {
     
     //MARK: - Methods
     func intiateSegue() {
-      loginView.segueDelegate = self
+      LoginView.segueDelegate = self
         performSegue(withIdentifier: "UserProfileSegue", sender: self)
-        let UserProfileStoryBoard = UIStoryboard(name: "Main", bundle:Bundle.main)
-                   let userProfileVC = UserProfileStoryBoard.instantiateViewController(withIdentifier: "UserProfile") as! UserProfileViewController
-                               present(userProfileVC, animated: true, completion: nil)
       }
 
 

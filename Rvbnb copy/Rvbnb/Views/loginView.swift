@@ -91,7 +91,8 @@ private var loginView: UIView = {
         view.layer.cornerRadius =   30
         return view
     }()
-
+    
+    
     //MARK: - Methods
 @objc func LoginButton() {
         guard let username = usernameTextfield.text,!username.isEmpty,
@@ -107,7 +108,7 @@ private var loginView: UIView = {
         loginView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
         loginView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         loginView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
-        loginView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -300).isActive = true
+        loginView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -200).isActive = true
         
         loginView.addSubview(loginLabel)
         loginLabel.topAnchor.constraint(equalTo: loginView.topAnchor, constant: 20).isActive = true
