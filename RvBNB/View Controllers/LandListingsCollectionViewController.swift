@@ -63,6 +63,17 @@ class LandListingsCollectionViewController: UICollectionViewController {
 
         return cell
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectLandSegue" {
+            guard let indexPath = collectionView.indexPathsForSelectedItems?.first?.item,
+                let landSelectVC = segue.destination as? LandDetailViewController else{return}
+            
+            let landSelected = mockLandController.listing[indexPath]
+            landSelectVC.land = landSelected
+        }
+    }
 
     // MARK: UICollectionViewDelegate
 

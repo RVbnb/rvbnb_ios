@@ -16,17 +16,39 @@ class LandDetailViewController: UIViewController {
     @IBOutlet weak var landOwnerLabel: UILabel!
     @IBOutlet weak var contactNumberLabel: UILabel!
     
+    @IBOutlet weak var landImage: UIImageView!
     
     
     @IBAction func scheduleStayButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        showAlert()
     }
+    
+    
+    var land: ListingRepresentation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
+    func updateViews(){
+        if let land = land {
+            locationLabel.text = land.location
+            landImage.image = land.landPhoto
+        }
+        
+        
+    }
+    
+    
+    
+    private func showAlert(){
+        let alert = UIAlertController(title: "Your Appointment has been scheduled", message: "Thank you! Your schedule date will be emailed to you", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

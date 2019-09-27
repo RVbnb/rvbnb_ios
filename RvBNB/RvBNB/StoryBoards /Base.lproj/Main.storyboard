@@ -255,7 +255,7 @@
                                 <connections>
                                     <outlet property="landListedImage" destination="Tvh-mq-fOJ" id="C5y-wX-Nuy"/>
                                     <outlet property="landListedLabel" destination="Xgd-wz-Xnh" id="Pdh-cg-a4V"/>
-                                    <segue destination="wsF-Ma-mLn" kind="show" id="FuI-1U-F2V"/>
+                                    <segue destination="wsF-Ma-mLn" kind="show" identifier="SelectLandSegue" id="FuI-1U-F2V"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -371,6 +371,7 @@
                     <navigationItem key="navigationItem" title="Selected Land" id="9G8-eK-qrk"/>
                     <connections>
                         <outlet property="contactNumberLabel" destination="rcH-GM-81t" id="8O8-Fy-0id"/>
+                        <outlet property="landImage" destination="jwv-nx-B3n" id="rIe-sL-UGQ"/>
                         <outlet property="landOwnerLabel" destination="Oio-Oj-OWP" id="Sgt-ko-MST"/>
                         <outlet property="locationLabel" destination="PPk-y8-Nex" id="dcn-d0-9Yh"/>
                     </connections>

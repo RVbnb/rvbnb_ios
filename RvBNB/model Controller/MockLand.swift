@@ -15,13 +15,13 @@ class MockLandController {
     
         
     ListingRepresentation(landPhoto: "MockLand1", location: "Alaska", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand2", location: "here", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand3", location: "here", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand4", location: "here", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand5", location: "here", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand6", location: "here", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand7", location: "here", ownerID: 1, landDescription: "good"),
-    ListingRepresentation(landPhoto: "MockLand7", location: "here", ownerID: 1, landDescription: "good")
+    ListingRepresentation(landPhoto: "MockLand2", location: "Wyoming", ownerID: 1, landDescription: "good"),
+    ListingRepresentation(landPhoto: "MockLand3", location: "Florida", ownerID: 1, landDescription: "good"),
+    ListingRepresentation(landPhoto: "MockLand4", location: "Alaska", ownerID: 1, landDescription: "good"),
+    ListingRepresentation(landPhoto: "MockLand5", location: "Georgia", ownerID: 1, landDescription: "good"),
+    ListingRepresentation(landPhoto: "MockLand6", location: "New York", ownerID: 1, landDescription: "good"),
+    ListingRepresentation(landPhoto: "MockLand7", location: "California", ownerID: 1, landDescription: "good"),
+    ListingRepresentation(landPhoto: "MockLand7", location: "Utah", ownerID: 1, landDescription: "good")
     
     
                                     ]
