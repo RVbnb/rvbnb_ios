@@ -45,7 +45,7 @@ class LandDetailViewController: UIViewController {
     
     
     private func showAlert(){
-        let alert = UIAlertController(title: "Your Appointment has been scheduled", message: "Thank you! Your schedule date will be emailed to you", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Your land has been reserved.", message: "Thank you! Your arraged stay date(s) will be emailed to you", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

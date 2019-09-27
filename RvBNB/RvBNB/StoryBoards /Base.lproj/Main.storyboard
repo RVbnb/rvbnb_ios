@@ -196,7 +196,7 @@
             </objects>
             <point key="canvasLocation" x="2831" y="9"/>
         </scene>
-        <!--Land Listing-->
+        <!--Land Listed by Owners-->
         <scene sceneID="Qng-oD-7MZ">
             <objects>
                 <collectionViewController id="BbZ-da-zNX" customClass="LandListingsCollectionViewController" customModule="RvBNB" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,11 +224,11 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rYK-O8-JoE">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-mq-fOJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="115"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-mq-fOJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="115.5"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-wz-Xnh">
-                                                            <rect key="frame" x="39" y="119" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-wz-Xnh">
+                                                            <rect key="frame" x="39" y="119.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -264,7 +264,7 @@
                             <outlet property="delegate" destination="BbZ-da-zNX" id="KAR-wu-3YF"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Land Listing" id="K5j-Bm-LQ8">
+                    <navigationItem key="navigationItem" title="Land Listed by Owners" id="K5j-Bm-LQ8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SSp-oH-q4b">
                             <connections>
                                 <segue destination="yZI-5S-jug" kind="show" id="coI-r0-MiU"/>
