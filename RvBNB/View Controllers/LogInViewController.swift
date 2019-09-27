@@ -14,7 +14,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
+    let apiController = ApiController()
     
     
     override func viewDidLoad() {

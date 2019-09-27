@@ -12,37 +12,48 @@ import CoreData
 class CreateProfileViewController: UIViewController {
 
     
-    var apiController: ApiController?
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
     
-    @IBOutlet weak var emailTextField: UITextField!
+    var apiController: ApiController?
+    var user: User?
+    
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        guard let apiController = apiController else {return}
+       // guard let apiController = apiController else {return}
         guard let username = firstNameTextField.text, !username.isEmpty,
             let password = passwordTextField.text,!password.isEmpty else {return}
         
+        if let user = user {
+            apiController?.updateUser(user: user, with: username , password: password)
+        } else {
+            apiController?.createUser(with: username, passwword: password, isLandOwner: false)
+        }
         
-        //Should 'User' be 'UserRepresentation'?
-        let user = User(username: username, password: password, isLandOwner: false, context: CoreDataStack.shared.mainContext)
-        DispatchQueue.main.async {
-            apiController.registerUser(with: user)
-            self.dismiss(animated: true, completion: nil)
-
-            }
+        navigationController?.popViewController(animated: true)
+    }
         
         
         
-            }
+        
+//        let user = User(username: username, password: password, isLandOwner: false, context: CoreDataStack.share.mainContext)
+//        DispatchQueue.main.async {
+//           // apiController.registerUser(with: user)
+//            self.dismiss(animated: true, completion: nil)
+//
+//            }
+        
+        
+        
+            
     
     
     @IBAction func cancelButton(_ sender: Any) {

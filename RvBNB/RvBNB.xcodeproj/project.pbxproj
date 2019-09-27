@@ -19,8 +19,8 @@
 		45BB10B12339780E007538E3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B02339780E007538E3 /* UserViewController.swift */; };
 		45BB10B32339782C007538E3 /* ListYourLandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B22339782C007538E3 /* ListYourLandViewController.swift */; };
 		45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B42339785B007538E3 /* SettingsViewController.swift */; };
-		45BB10BF233A73D7007538E3 /* RvBNB+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */; };
 		45BB114F233BD6AE007538E3 /* AddListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB114E233BD6AE007538E3 /* AddListingViewController.swift */; };
+		45BB1178233E45CA007538E3 /* Rv+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB1177233E45CA007538E3 /* Rv+Convenience.swift */; };
 		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
 		DDDE789F233A8642007DE334 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE789E233A8642007DE334 /* Bearer.swift */; };
 		DDDE78F0233BC559007DE334 /* UserRegisterRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */; };
@@ -47,8 +47,8 @@
 		45BB10B02339780E007538E3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		45BB10B22339782C007538E3 /* ListYourLandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListYourLandViewController.swift; sourceTree = "<group>"; };
 		45BB10B42339785B007538E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RvBNB+Convenience.swift"; sourceTree = "<group>"; };
 		45BB114E233BD6AE007538E3 /* AddListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListingViewController.swift; sourceTree = "<group>"; };
+		45BB1177233E45CA007538E3 /* Rv+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rv+Convenience.swift"; sourceTree = "<group>"; };
 		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		DDDE789E233A8642007DE334 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterRepresentation.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		DDEE8D03233A6D1C00F8AB4A /* Core data */ = {
 			isa = PBXGroup;
 			children = (
-				45BB10BE233A73D7007538E3 /* RvBNB+Convenience.swift */,
+				45BB1177233E45CA007538E3 /* Rv+Convenience.swift */,
 				DDEE8D00233A6D1500F8AB4A /* RvBNB.xcdatamodeld */,
 				DDEE8D04233A6E3800F8AB4A /* CoreDataStack.swift */,
 			);
@@ -236,6 +236,7 @@
 				45BB114F233BD6AE007538E3 /* AddListingViewController.swift in Sources */,
 				45BB10B12339780E007538E3 /* UserViewController.swift in Sources */,
 				DDDE78F2233BC573007DE334 /* ListingRepresentation.swift in Sources */,
+				45BB1178233E45CA007538E3 /* Rv+Convenience.swift in Sources */,
 				DDEE8D02233A6D1500F8AB4A /* RvBNB.xcdatamodeld in Sources */,
 				45BB10AB23397670007538E3 /* LandListedCollectionViewCell.swift in Sources */,
 				45BB10A7233975E0007538E3 /* LandListingsCollectionViewController.swift in Sources */,
@@ -247,7 +248,6 @@
 				45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */,
 				DDDE789F233A8642007DE334 /* Bearer.swift in Sources */,
 				45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */,
-				45BB10BF233A73D7007538E3 /* RvBNB+Convenience.swift in Sources */,
 				45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

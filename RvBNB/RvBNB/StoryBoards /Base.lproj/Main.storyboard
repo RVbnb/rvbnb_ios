@@ -63,6 +63,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButton:" destination="QIh-U5-y5S" eventType="touchUpInside" id="KrJ-pW-JML"/>
+                                    <segue destination="E43-sX-xiE" kind="showDetail" identifier="CreateUserSegue" id="GVJ-S5-ckx"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-mm-9ke">
@@ -97,9 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zfk-Ni-V8g"/>
                     <connections>
-                        <outlet property="emailTextField" destination="ObI-0O-TIJ" id="imL-R6-CPP"/>
                         <outlet property="firstNameTextField" destination="7DK-Ov-gM6" id="hb7-ml-DaI"/>
-                        <outlet property="lastNameTextField" destination="De8-MQ-iH8" id="zhb-KW-Pud"/>
                         <outlet property="passwordTextField" destination="5nZ-Ex-ce7" id="uBj-Cz-E62"/>
                     </connections>
                 </viewController>
@@ -561,4 +560,7 @@
         <image name="circle-user-7" width="30" height="30"/>
         <image name="earth-america-7" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GVJ-S5-ckx"/>
+    </inferredMetricsTieBreakers>
 </document>

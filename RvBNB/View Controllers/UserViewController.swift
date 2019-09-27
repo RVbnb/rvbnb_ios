@@ -7,21 +7,48 @@
 //
 
 import UIKit
+import CoreData
 
 class UserViewController: UIViewController {
 
+    
+    var users: [User] {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        
+        do {
+            let users = try CoreDataStack.share.mainContext.fetch(fetchRequest)
+            return users
+        } catch {
+            NSLog("Error fetching tasks: \(error)")
+            return []
+        }
+    }
+    
+    var apiController: ApiController?
+    var user: User?
+    
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
 
+    func updateViews(){
+        
+       // nameLabel.text = users.username
+    }
+    
+    
     /*
     // MARK: - Navigation
 
