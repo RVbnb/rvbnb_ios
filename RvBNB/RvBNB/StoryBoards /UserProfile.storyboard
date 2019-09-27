@@ -140,6 +140,19 @@
                                     <constraint firstAttribute="width" secondItem="zka-XD-ODe" secondAttribute="height" multiplier="69:64" id="ctm-U3-1NP"/>
                                 </constraints>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVw-5R-zrg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Your Profile" id="Olq-Jp-uKg">
+                                        <barButtonItem key="rightBarButtonItem" title="Take Me Back" id="SPE-Yv-eYS">
+                                            <connections>
+                                                <action selector="takeMeBackUnwind:" destination="hvT-kA-9Vx" id="DuV-IX-poq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="1" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -157,9 +170,11 @@
                     <connections>
                         <outlet property="nameLabel" destination="jsa-Fm-9Gl" id="izl-fh-iIe"/>
                         <outlet property="userImage" destination="zka-XD-ODe" id="cgB-1i-lU3"/>
+                        <segue destination="aLU-gY-nkg" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="I1e-6G-xQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y6-Cp-cgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aLU-gY-nkg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="223.18840579710147" y="72.991071428571431"/>
         </scene>

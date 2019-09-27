@@ -25,7 +25,7 @@ class UserViewController: UIViewController {
     }
     
     var apiController: ApiController?
-    var user: User?
+   // var user: User?
     
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -33,6 +33,9 @@ class UserViewController: UIViewController {
     
     
     
+    @IBAction func takeMeBackUnwind(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
+    }
     
     
     
@@ -45,7 +48,7 @@ class UserViewController: UIViewController {
 
     func updateViews(){
         
-       // nameLabel.text = users.username
+      // nameLabel.text = users.username
     }
     
     

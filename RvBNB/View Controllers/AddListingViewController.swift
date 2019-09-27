@@ -26,6 +26,8 @@ class AddListingViewController: UIViewController {
 
     
     @IBAction func saveListingButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        showAlert()
     }
     
     
@@ -33,6 +35,12 @@ class AddListingViewController: UIViewController {
     }
     
     
+    
+    private func showAlert(){
+        let alert = UIAlertController(title: "ERROR: Please Sign In", message: "You must be Signed In to schedule land reservation.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
     
     /*
     // MARK: - Navigation
