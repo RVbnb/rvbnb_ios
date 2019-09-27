@@ -7,15 +7,28 @@
 //
 
 import Foundation
+import UIKit
 
-struct ListingRepresentation: Codable {
+//Re configured Model for Mock Data 
+
+struct ListingRepresentation {//: Codable
     
     
-    let landPhoto: String
-    let location: String
-    let ownerID: Int
-    let pricePerDay: Double
-    let landDescription: String
+    var landPhoto: UIImage
+    var location: String
+    var ownerID: Int
+    //var pricePerDay: Double
+    var landDescription: String
+    
+    init(landPhoto: String, location: String, ownerID: Int, landDescription: String) {
+       self.landPhoto = UIImage(named: landPhoto)!
+        
+        self.location = location
+        
+        self.ownerID = ownerID
+        self.landDescription = landDescription
+    }
+    
     
     enum CodingKeys: String, CodingKey {
         case landPhoto

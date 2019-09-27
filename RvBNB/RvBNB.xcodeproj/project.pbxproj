@@ -21,6 +21,8 @@
 		45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB10B42339785B007538E3 /* SettingsViewController.swift */; };
 		45BB114F233BD6AE007538E3 /* AddListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB114E233BD6AE007538E3 /* AddListingViewController.swift */; };
 		45BB1178233E45CA007538E3 /* Rv+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB1177233E45CA007538E3 /* Rv+Convenience.swift */; };
+		45BB117C233E49D6007538E3 /* UserSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB117B233E49D6007538E3 /* UserSettingsTableViewCell.swift */; };
+		45BB117E233E4ADD007538E3 /* MockLand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB117D233E4ADD007538E3 /* MockLand.swift */; };
 		DD142C67233951B3004CF624 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD142C66233951B3004CF624 /* UserProfile.storyboard */; };
 		DDDE789F233A8642007DE334 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE789E233A8642007DE334 /* Bearer.swift */; };
 		DDDE78F0233BC559007DE334 /* UserRegisterRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */; };
@@ -49,6 +51,8 @@
 		45BB10B42339785B007538E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		45BB114E233BD6AE007538E3 /* AddListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListingViewController.swift; sourceTree = "<group>"; };
 		45BB1177233E45CA007538E3 /* Rv+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rv+Convenience.swift"; sourceTree = "<group>"; };
+		45BB117B233E49D6007538E3 /* UserSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		45BB117D233E4ADD007538E3 /* MockLand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLand.swift; sourceTree = "<group>"; };
 		DD142C66233951B3004CF624 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		DDDE789E233A8642007DE334 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		DDDE78EF233BC559007DE334 /* UserRegisterRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterRepresentation.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				45BB10AC233976FE007538E3 /* LogInViewController.swift */,
 				45BB10AE2339778A007538E3 /* CreateProfileViewController.swift */,
 				45BB10B02339780E007538E3 /* UserViewController.swift */,
+				45BB117B233E49D6007538E3 /* UserSettingsTableViewCell.swift */,
 				45BB10B22339782C007538E3 /* ListYourLandViewController.swift */,
 				45BB10B42339785B007538E3 /* SettingsViewController.swift */,
 			);
@@ -144,6 +149,7 @@
 			children = (
 				DDDE789E233A8642007DE334 /* Bearer.swift */,
 				DDDE78F7233BC5DA007DE334 /* ApiController.swift */,
+				45BB117D233E4ADD007538E3 /* MockLand.swift */,
 			);
 			path = "model Controller";
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 				45BB10AD233976FE007538E3 /* LogInViewController.swift in Sources */,
 				45BB10AF2339778A007538E3 /* CreateProfileViewController.swift in Sources */,
 				DDDE789F233A8642007DE334 /* Bearer.swift in Sources */,
+				45BB117E233E4ADD007538E3 /* MockLand.swift in Sources */,
+				45BB117C233E49D6007538E3 /* UserSettingsTableViewCell.swift in Sources */,
 				45BB10A923397648007538E3 /* LandDetailViewController.swift in Sources */,
 				45BB10B52339785B007538E3 /* SettingsViewController.swift in Sources */,
 			);

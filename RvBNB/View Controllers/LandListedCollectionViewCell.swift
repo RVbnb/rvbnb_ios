@@ -14,7 +14,7 @@ class LandListedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var landListedImage: UIImageView!
     @IBOutlet weak var landListedLabel: UILabel!
     
-    var listing: Listing? {
+    var landListing: ListingRepresentation? {
         didSet{
             updateViews()
         }
@@ -22,10 +22,10 @@ class LandListedCollectionViewCell: UICollectionViewCell {
     
     
     func updateViews(){
-        guard let listing = listing else{return}
-// UNCOMMENT// landListedImage.image = listing.landPhoto
+        guard let listing = landListing else{return}
+
         landListedLabel.text = listing.location
-        
+        landListedImage.image = listing.landPhoto
     }
     
     

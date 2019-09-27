@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class LandListingsCollectionViewController: UICollectionViewController {
 
-    var listingRepresentation: ListingRepresentation?
+    let mockLandController = MockLandController()
     
     
     override func viewDidLoad() {
@@ -47,23 +47,22 @@ class LandListingsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return mockLandController.listing.count
     }
 
     
-    //UNCOMMENT
     
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LandListedCell", for: indexPath) as? LandListedCollectionViewCell else{return UICollectionViewCell()}
-//
-//
-//        let listing = listingRepresentation?.listing[indexPath.item]
-//       cell.listing = listing
-//
-//
-//
-//        return cell
-//    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LandListedCell", for: indexPath) as? LandListedCollectionViewCell else{return UICollectionViewCell()}
+
+
+        let land = mockLandController.listing[indexPath.item]
+        cell.landListing = land
+
+
+        return cell
+    }
 
     // MARK: UICollectionViewDelegate
 
